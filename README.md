@@ -25,9 +25,9 @@ Each row contains:  timestamp, open, close, high, low, volume
 Note: 
 If the coin you like to get data about a coin that is rather small, has low traing volume and your time frequency is low, it can be the case that bitfinex gives you no data for some points in time. My code fills this points with the price from the last point in time were data is avaiable. Consider follwing example:
 
--t-2: price is 1
--t-1: price is 2
--t: bitfinex doesn't give you data for t because the price hasn't changed --> price is still 2
+- t-2: price is 1
+- t-1: price is 2
+- t: bitfinex doesn't give you data for t because the price hasn't changed --> price is still 2
 
 
 
