@@ -37,30 +37,30 @@ def get_bitfinex_data(coin, time_intervall, fill_empty_rows):
         time_intervall_ms_query = (720000000.0 * 2)
         time_intervall_ms_query_2 = (4500000 * 2)
         time_intervall2 = '30Min'
-    if time_intervall == '1H':
+    if time_intervall == '1h':
         time_intervall_ms_query = (720000000.0 * 4)
         time_intervall_ms_query_2 = (4500000 * 4)
-        time_intervall2 = '1H'
-    if time_intervall == '4H':
+        time_intervall2 = '1h'
+    if time_intervall == '4h':
         time_intervall_ms_query = (720000000.0 * 16)
         time_intervall_ms_query_2 = (4500000 * 16)
-        time_intervall2 = '4H'
-    if time_intervall == '6H':
+        time_intervall2 = '4h'
+    if time_intervall == '6h':
         time_intervall_ms_query = (720000000.0 * 24)
         time_intervall_ms_query_2 = (4500000 * 24)
-        time_intervall2 = '6H'
-    if time_intervall == '12H':
+        time_intervall2 = '6h'
+    if time_intervall == '12h':
         time_intervall_ms_query = (720000000.0 * 48)
         time_intervall_ms_query_2 = (4500000 * 48)
         time_intervall2 = '12H'
-    if time_intervall == 'D':
+    if time_intervall == '1D':
         time_intervall_ms_query = (720000000.0 * 96)
         time_intervall_ms_query_2 = (4500000 * 96)
-        time_intervall2 = 'D'
-    if time_intervall == 'W':
+        time_intervall2 = '1D'
+    if time_intervall == '7D':
         time_intervall_ms_query = (720000000.0 * 336)
         time_intervall_ms_query_2 = (4500000 * 336)
-        time_intervall2 = 'W'
+        time_intervall2 = '7D'
 
     # -------------------
 
@@ -83,7 +83,8 @@ def get_bitfinex_data(coin, time_intervall, fill_empty_rows):
         test2_date = test2_date + time_intervall_ms_query + time_intervall_ms_query_2
 
         data = r.json()
-        
+        print(data)
+
         for i in data:  
             i[0] = (i[0]/1000)
 
@@ -110,7 +111,7 @@ def get_bitfinex_data(coin, time_intervall, fill_empty_rows):
 ##################################################################################
 
 #define start date
-start = '01.12.2018 09:00:00,00'
+start = '01.01.2016 09:00:00,00'
 # -----------------------------------------------------------------------------
 
 #transform date to milliseconds
@@ -129,8 +130,8 @@ get_coins = ['ZRXBTC', 'QTMBTC', 'ZECBTC', 'ETCBTC', 'XMRBTC', 'ETHBTC', 'NEOBTC
             'LTCBTC', 'IOTBTC', 'XRPBTC', 'XLMBTC', 'ETPBTC', 'TRXBTC', 'BATBTC',
             'VETBTC', 'IOSBTC', 'POYBTC', 'QSHBTC', 'DATBTC', 'OMGBTC', 'ELFBTC']
 
-#possible time intervalls: 1m/5m/15m/30m/1H/4H/6H/12H/D/W
-time_intervall = '5m'
+#possible time intervalls: 1m/5m/15m/30m/1h/4h/6h/12h/1D
+time_intervall = '1D'
 
 ##################################################################################
 ########################### END INDIVIDUAL AREA ##################################
