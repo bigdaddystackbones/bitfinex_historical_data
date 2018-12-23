@@ -30,6 +30,8 @@ If the coin you like to get data about a coin that is rather small, has low trai
 - t: bitfinex doesn't give you data for t because the price hasn't changed --> price is still 2
 
 
+I appreciate every feedback regarding the code.
+You can send an email to bigdaddystackbones@protonmail.com
 
 
 
