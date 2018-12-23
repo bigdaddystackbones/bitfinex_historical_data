@@ -16,7 +16,7 @@ The code is split into a general area and a individual area.
 The general area defines the functions necessary to download the pricing data.
 In the indiviual area you can set the time horizon for which you like to get data. You can also define the coins in which you are interested.
 
-The data is about 1m/5m/15m/30m/1H/4H/6H/12H/D/W candlestick data
+The data is about 1m/5m/15m/30m/1h/4h/6h/12h/1D candlestick data
 You can set the time frequency in the individual area.
 
 After running the code the data is stored as a csv data in your workspace. 
